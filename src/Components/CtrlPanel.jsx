@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 class CtrlPanel extends Component {
   state = {
     tag: "",
@@ -24,13 +23,30 @@ class CtrlPanel extends Component {
     this.setState({ r18: val.target.checked });
   }
 
+  connectArgs = () => {
+    let args = "";
+    if (this.state.tag.length) {
+      let tagList = this.state.tag.split(' ');
+      for (let tag of tagList) {
+        args += `&tag=${encodeURIComponent(tag)}`;
+      }
+    }
+    if (this.state.uid.length) {
+      args += `&uid=${encodeURIComponent(this.state.uid)}`;
+    }
+    args += `&size=${encodeURIComponent(this.state.size)}`;
+    args += `&r18=${this.state.r18 ? "1" : "0"}`;
+    args += "&proxy=https://pximg.diona.cc/"
+    return args.substring(1);
+  }
+
   render() {
     return (
       <React.Fragment>
         <div>
           <span className="h3">控制面板</span>
           <span className="fw-light ms-2">请在此处指定参数</span>
-          <button type="button" className="btn btn-sm btn-primary float-end">开始涩涩</button>
+          <button type="button" className="btn btn-sm btn-primary float-end" onClick={() => this.props.sendRequest(this.connectArgs())}>开始涩涩</button>
         </div>
         <hr />
         <div className="input-group">
