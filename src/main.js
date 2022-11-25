@@ -1,5 +1,5 @@
-const { app, BrowserWindow } = require('electron');
 const electron = require('electron');
+const { app, BrowserWindow, shell } = require('electron');
 
 function createWindow() {
     const menu = electron.Menu;
@@ -10,6 +10,10 @@ function createWindow() {
         center: true,
 
     });
+    win.webContents.on('new-window', function (e, url) {
+        e.preventDefault();
+        require('electron').shell.openExternal(url);
+    })
     win.loadURL('http://localhost:3000/');
 }
 
