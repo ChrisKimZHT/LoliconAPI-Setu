@@ -22,7 +22,24 @@ class HomePage extends Component {
 
   sendRequest = async (args) => {
     const resp = await requestAPI(args);
-    this.setState({ data: resp.data.data[0] });
+    if (resp.data.data.length) {
+      this.setState({ data: resp.data.data[0] });
+    }
+    else {
+      this.setState({
+        data: {
+          pid: "",
+          p: "",
+          uid: "",
+          title: "ERROR",
+          author: "ERROR",
+          width: "",
+          height: "",
+          tags: [],
+          urls: {},
+        }
+      });
+    }
   }
 
   render() {
