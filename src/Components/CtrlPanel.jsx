@@ -46,7 +46,7 @@ class CtrlPanel extends Component {
         <div>
           <span className="h3">控制面板</span>
           <span className="fw-light ms-2">请在此处指定参数</span>
-          <button type="button" className="btn btn-sm btn-primary float-end" onClick={() => this.props.sendRequest(this.connectArgs())}>开始涩涩</button>
+          <button type="button" className="btn btn-sm btn-primary float-end" onClick={() => this.props.sendRequest(this.connectArgs())}>可以涩涩</button>
         </div>
         <hr />
         <div className="input-group">

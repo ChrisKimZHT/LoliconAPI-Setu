@@ -28,7 +28,7 @@ class HomePage extends Component {
   render() {
     return (
       <div className="card mt-3 div-homepage">
-        <div className="card-header">可以涩涩</div>
+        <div className="card-header">不可以涩涩</div>
         <div className="card-body">
           <div className="row">
             <div className="col-xl-4 col-lg-6">
