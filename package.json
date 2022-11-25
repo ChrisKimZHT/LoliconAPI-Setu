@@ -13,7 +13,8 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "main": "./src/main.js",
+  "main": "main.js",
+  "homepage": "./",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -39,7 +40,6 @@
       "last 1 safari version"
     ]
   },
-  "homepage": ".",
   "devDependencies": {
     "electron": "^21.3.1",
     "electron-packager": "^17.1.1"

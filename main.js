@@ -4,17 +4,17 @@ const { app, BrowserWindow, shell } = require('electron');
 function createWindow() {
     const menu = electron.Menu;
     menu.setApplicationMenu(null)
-    const win = new BrowserWindow({
+    const mainWindow = new BrowserWindow({
         width: 1024,
         height: 768,
         center: true,
-
     });
-    win.webContents.on('new-window', function (e, url) {
+    mainWindow.webContents.on('new-window', function (e, url) {
         e.preventDefault();
         require('electron').shell.openExternal(url);
     })
-    win.loadURL('http://localhost:3000/');
+    // mainWindow.loadURL("http://localhost:3000/");
+    mainWindow.loadFile("build/index.html");
 }
 
 
