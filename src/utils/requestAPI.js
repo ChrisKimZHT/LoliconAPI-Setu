@@ -1,6 +1,6 @@
 import axios from "axios";
 
-let url = "https://dev.chriskim.cn/api/loli?"
+let url = "https://s1.chriskim.top/loli?"
 
 function requestAPI(arg) {
   const response = axios(url + arg);
