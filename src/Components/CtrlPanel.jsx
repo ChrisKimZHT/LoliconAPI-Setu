@@ -36,7 +36,7 @@ class CtrlPanel extends Component {
     }
     args += `&size=${encodeURIComponent(this.state.size)}`;
     args += `&r18=${this.state.r18 ? "1" : "0"}`;
-    args += "&proxy=https://pximg.diona.cc/"
+    args += "&proxy=https://pximg.nahida.cc/"
     return args.substring(1);
   }
 
