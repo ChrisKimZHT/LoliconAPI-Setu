@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CtrlPanel from '../Components/CtrlPanel';
 import DisplayPic from '../Components/DisplayPic';
 import PicInfo from '../Components/PicInfo';
-import { requestAPI } from '../utils/requestAPI.js';
+import { requestAPI } from '../Utils/requestAPI.js';
 import './HomePage.css';
 
 class HomePage extends Component {
