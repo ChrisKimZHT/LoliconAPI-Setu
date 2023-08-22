@@ -1,6 +1,6 @@
 import axios from "axios";
 
-let url = "https://nahida.cc/lolicon/?"
+let url = window.Config.apiURL;
 
 function requestAPI(arg) {
   const response = axios(url + arg);
